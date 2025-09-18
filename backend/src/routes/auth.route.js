@@ -6,6 +6,7 @@ import {
   refreshToken,
   forgotPassword,
   resetPassword,
+  logout
 } from "../controllers/auth.controller.js";
 
 const route=Router()
@@ -18,5 +19,7 @@ route.post("/refresh" , refreshToken)
 
 route.post("/forgot-password", forgotPassword)
 route.get("/reset/:token", resetPassword)
+
+route.get("/logout",logout)
 
 export default route

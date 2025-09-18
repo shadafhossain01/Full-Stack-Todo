@@ -236,6 +236,12 @@ await exitsUser.save()
 res.json({message:"Password Reset Succesfully."})
 };
 
+// Logout Controller
+const logout=(req,res)=>{
+res.clearCookie("RefreshToken");
+res.json({ message: "Logout Successful ✅" });
+}
+
 
 export {
   signUp,
@@ -244,4 +250,5 @@ export {
   refreshToken,
   forgotPassword,
   resetPassword,
+  logout
 };
